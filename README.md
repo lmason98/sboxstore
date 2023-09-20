@@ -1,2 +1,2 @@
 # sboxstore
-gmodstore clone for s&amp;box using django/react.
+sandbox marketplace web application using django/react.
