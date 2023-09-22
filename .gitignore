@@ -1,0 +1,7 @@
+# IDE
+.idea/
+
+# Backend
+.sboxenv/
+
+# Frontend
