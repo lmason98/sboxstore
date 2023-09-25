@@ -2,10 +2,11 @@
 .idea/
 
 # Docker
-./.env
-./.env.db
+.env
+.env.db
 
 # Backend
 .sboxenv/
+__pycache__/
 
 # Frontend
