@@ -12,10 +12,15 @@ sandbox marketplace web application using django/react.
 SECRET_KEY="my_secret_key"
 DEBUG=1
 ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+CSRF_TRUSTED_ORIGINS=http://localhost:8000
+
+DJANGO_SUPERUSER_USERNAME=admin
+DJANGO_SUPERUSER_PASSWORD=admin
+DJANGO_SUPERUSER_EMAIL=a@g.com
 
 SQL_ENGINE=django.db.backends.postgresql
 SQL_DATABASE=dbname
-SQL_USER=dbuse
+SQL_USER=dbuser
 SQL_PASSWORD=dbpass
 SQL_HOST=db
 SQL_PORT=5432
