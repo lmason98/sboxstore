@@ -10,3 +10,4 @@
 __pycache__/
 
 # Frontend
+packge-lock.json
