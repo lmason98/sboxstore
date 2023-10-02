@@ -8,7 +8,7 @@ ENV PYTHONUNBUFFERED 1
 RUN apt-get update && apt-get install -y netcat-traditional
 
 # Create sbox user
-RUN addgroup --system sbox && adduser --system --group sbox
+#RUN addgroup --system sbox && adduser --system --group sbox
 
 # Create backend directory
 RUN mkdir /api
@@ -20,13 +20,13 @@ WORKDIR /api
 # Copy project files to /backend
 COPY . /api/
 RUN chmod +x /api/entrypoint.sh
-RUN chown -R sbox:sbox /api/
+#RUN chown -R sbox:sbox /api/
 
 # Install requirements
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Change to sbox user
-USER sbox
+#USER sbox
 
 ENTRYPOINT ["/api/entrypoint.sh"]
