@@ -10,4 +10,5 @@
 __pycache__/
 
 # Frontend
-packge-lock.json
+package-lock.json
+node_modules/
