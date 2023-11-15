@@ -9,12 +9,12 @@ services:
     env_file:
       - ./.env.db
 
-  api:
+  backend:
     build: ./backend
     command: gunicorn sboxstore.wsgi:application --bind 0.0.0.0:8000
     volumes:
-      - static_volume:/api/staticfiles
-      - ./backend:/api
+      - static_volume:/backend/staticfiles
+      - ./backend:/backend
     expose:
       - 8000
     env_file:
@@ -27,9 +27,9 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - static_volume:/api/staticfiles
+      - static_volume:/backend/staticfiles
     depends_on:
-      - api
+      - backend
 
   frontend:
     build: ./frontend
@@ -39,7 +39,7 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - api
+      - backend
 
 volumes:
   postgres_data:
